@@ -5,9 +5,15 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+import java.util.Random;
+
 
 public class Launcher extends PApplet {
 
+    Random rand = new Random();
+    int r = rand.nextInt(255);
+    int g = rand.nextInt(255);
+    int b = rand.nextInt(255);
 
     public static void main(String[] args) {
         PApplet.main("Launcher");
@@ -21,7 +27,7 @@ public class Launcher extends PApplet {
 
     //One time execution on startup
     public void setup() {
-        fill(120, 50, 240);
+        fill(r, g, b);
 
     }
 
